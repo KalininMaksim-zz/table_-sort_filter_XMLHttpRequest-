@@ -1,0 +1,41 @@
+.wrapper-table {
+  display: flex;
+  justify-content: center;
+}
+.table_sort table {
+  border-collapse: collapse;
+}
+
+.table_sort th {
+  color: #ffebcd;
+  background: #008b8b;
+  cursor: pointer;
+}
+
+.table_sort td,
+.table_sort th {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border: 2px solid #846868;
+}
+
+.table_sort tbody tr:nth-child(even) {
+  background: #e3e3e3;
+}
+
+th.sorted[data-order] {
+  position: relative;
+}
+th:hover {
+  background: #008b8b49
+}
+
+.wrapper-filters {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.wrapper{ 
+  max-width: 1200px
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <span class="wrapper-filters">
+      <div class="age">
+        Age: from
+        <input type="text"
+               value="0"
+               id="age-from">
+        to
+        <input type="text"
+               value="100"
+               id="age-to">
+        <button onclick="filterOut()">
+          Sort by age
+        </button>
+      </div>
+
+      <div class="gender">
+        Gender:
+        <select type="text"
+                id="gender"
+                onchange="filterOut()">
+          <option>
+            All
+          </option>
+
+          <option>
+            female
+          </option>
+
+          <option>
+            male
+          </option>
+        </select>
+      </div>
+
+      <div class="company">
+        Company:
+        <select type="text"
+                id="listCompany"
+                onchange="filterOut()">
+          <option value="">
+            All
+          </option>
+        </select>
+      </div>
+
+      <input type="text"
+             id="query"
+             onkeyup="searchTable()"
+             placeholder="Search for form...">
+    </span>
+
+    <div class="wrapper-table">
+      <table id='myTable'
+             class="table_sort">
+        <thead class="head"
+               id="head">
+          <tr>
+            <th data-field="first"
+                data-flag="1"
+                data-type="string">
+              First name
+            </th>
+      
+            <th data-field="last"
+                data-flag="1"
+                data-type="string">
+              Last name
+            </th>
+      
+            <th data-field="sex"
+                data-flag="1"
+                data-type="string">
+              Sex
+            </th>
+      
+            <th data-field="age"
+                data-flag="1"
+                data-type="number">
+              Age
+            </th>
+      
+            <th data-field="email"
+                data-flag="1"
+                data-type="string">
+              Email
+            </th>
+      
+            <th data-field="phone"
+              data-flag="1"
+                data-type="string">
+              Phone number
+            </th>
+      
+            <th data-field="companys"
+                data-flag="1"
+                data-type="string">
+              Company
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
